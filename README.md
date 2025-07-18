@@ -143,10 +143,33 @@ firebase deploy
 - **Cart Components**: Cart page, items, item controls, total/checkout
 - **Firebase Integration**: Real-time listeners, Google OAuth, CRUD for cart
 
+## Firestore Usage (v9+ Modular API)
+This project uses the Firebase v9+ modular API for all Firestore operations. Example usage:
+
+```js
+import { collection, onSnapshot, doc, getDoc, setDoc, updateDoc, deleteDoc } from 'firebase/firestore';
+
+// Listen to a collection
+const itemsRef = collection(db, 'items');
+onSnapshot(itemsRef, (snapshot) => {
+  const items = snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
+});
+
+// Get, set, update, and delete a document
+const itemRef = doc(db, 'items', 'itemId');
+const itemSnap = await getDoc(itemRef);
+if (itemSnap.exists()) {
+  await updateDoc(itemRef, { field: 'value' });
+} else {
+  await setDoc(itemRef, { field: 'value' });
+}
+await deleteDoc(itemRef);
+```
+
 ## Migration Notes (for Upgraded Stack)
 - **React Router v7+**: Uses `<Routes>` and `element` prop for routes.
 - **MUI v5+**: All imports use `@mui/material` and `@mui/icons-material`.
-- **Firebase v9+ Modular API**: All Firestore and Auth usage must use the modular import style. See `src/firebase.js` for example.
+- **Firebase v9+ Modular API**: All Firestore and Auth usage must use the modular import style. See `src/firebase.js` and the example above.
 - **React Number Format v5+**: Use `{ NumericFormat }` instead of default import.
 
 ## Available Scripts
