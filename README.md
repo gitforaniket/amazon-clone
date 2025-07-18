@@ -220,7 +220,7 @@ REACT_APP_FIREBASE_APP_ID=your_app_id
 5. Open a Pull Request
 
 ## License
-This project is licensed under the MIT License - see the LICENSE file for details.
+This project is licensed under the [MIT License](./LICENSE) - see the LICENSE file for details.
 
 ## Acknowledgments
 - Amazon for design inspiration
