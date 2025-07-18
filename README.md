@@ -50,17 +50,27 @@ A full-stack e-commerce web application that replicates core Amazon functionalit
 ## Project Structure
 ```
 src/
-├── App.js              # Main application component with routing
-├── Header.js           # Navigation header with search and cart
-├── Home.js             # Homepage with product grid
-├── Product.js          # Individual product component
-├── Cart.js             # Shopping cart page
-├── CartItems.js        # Cart items list component
-├── CartItem.js         # Individual cart item component
-├── CartTotal.js        # Cart total and checkout section
-├── Login.js            # Authentication page
-├── firebase.js         # Firebase configuration (modular API)
-└── App.css             # Global styles
+├── App.js                  # Main application component with routing
+├── components/             # Reusable UI components
+│   ├── Header.js           # Navigation header with search and cart
+│   ├── Product.js          # Individual product component
+│   ├── CartItem.js         # Individual cart item component
+│   ├── CartItems.js        # Cart items list component
+│   ├── CartTotal.js        # Cart total and checkout section
+├── pages/                  # Top-level pages
+│   ├── Home.js             # Homepage with product grid
+│   ├── Cart.js             # Shopping cart page
+│   ├── Login.js            # Authentication page
+├── firebase/               # Firebase configuration (modular API)
+│   └── firebase.js         # Firebase config and exports
+├── styles/                 # Global and shared styles
+│   ├── App.css             # App-wide styles
+│   └── index.css           # Global styles
+├── index.js                # Entry point
+├── reportWebVitals.js      # Performance reporting
+├── setupTests.js           # Test setup
+├── logo.svg                # Logo asset
+└── App.test.js             # App test file
 ```
 
 ## Installation & Setup

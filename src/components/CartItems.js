@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import CartItem from './CartItem'
+import CartItem from '../components/CartItem'
 
 function CartItems({ cartItems }) {
     return (
