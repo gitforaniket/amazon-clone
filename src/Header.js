@@ -1,8 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
-import SearchIcon from '@material-ui/icons/Search';
-import ShoppingBasketIcon from '@material-ui/icons/ShoppingBasket';
-import LocationOnIcon from '@material-ui/icons/LocationOn';
+import SearchIcon from '@mui/icons-material/Search';
+import ShoppingBasketIcon from '@mui/icons-material/ShoppingBasket';
+import LocationOnIcon from '@mui/icons-material/LocationOn';
 import {
     Link
 } from "react-router-dom";
